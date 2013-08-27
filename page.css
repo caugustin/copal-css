@@ -1,0 +1,84 @@
+/* page.css -- copal-css.net, 2013-07-12 */
+
+#Page { 
+	position: relative;
+	text-align: left;     /* Undo occasional "text-align: center" from body */
+}
+#Header {
+	position: relative;
+	float: none;
+	clear: both;
+}
+#Header:after {
+	content: "."; display: block; height: 0; visibility: hidden; clear: both;
+}
+#Logo {
+	position: relative;
+	float: left;
+}
+@media print {
+	#Logo img.print { display: inline !important; }
+}
+#HeaderTitle {
+	position: relative;
+	float: left;
+}
+#MetaNavigation {
+	position: relative;
+	float: right;
+}
+#Main {
+	position: relative;
+	clear: both;
+}
+#Main:before, #Main:after {
+	content: "."; display: block; height: 0; visibility: hidden; clear: both;
+}
+#AreaNavigation {
+	position: relative;
+	clear: both;
+}
+#AreaNavigation ul {
+	position: relative;
+	clear: both;
+}
+#AreaNavigation ul:before, #AreaNavigation ul:after {
+	content: "."; display: block; height: 0; visibility: hidden; clear: both;
+}
+#AreaNavigation ul li {
+	position: relative;
+	float: left;
+}
+#Menu {
+	position: relative;
+}
+#Breadcrumb {
+	position: relative;
+}
+#Navigation {
+	position: relative;
+	float: left;
+	width: 20%;
+	padding-bottom: 1em; /* Force #Navigation to occupy space */
+}
+#Content {
+	position: relative;
+	float: left;
+	width: 55%;
+	padding-bottom: 1em; /* Force #Content to occupy space */
+}
+#Sidebar {
+	position: relative;
+	float: right;
+	width: 20%;
+	padding-bottom: 1em; /* Force #Sidebar to occupy space */
+}
+#Footer {
+	position: relative;
+	float: none;
+	clear: both;
+}
+
+
+
+

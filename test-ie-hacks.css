@@ -1,0 +1,21 @@
+/* test-ie-hacks -- copal-css.net, 2013-07-12 */
+
+.IE6selHack, .IE7selHack, .IE8mediaHack,
+.allButIE6selHack, .allButIE67selHack, .allButIE678selHack,
+.allButIE8selHack { color: #CCC; }
+* html .IE6selHack { color: green; }
+*+html .IE7selHack { color: green; }
+@media \0screen, \0print { .IE8mediaHack { color: green; } }
+html>body .allButIE6selHack { color: green; }
+html>/**/body .allButIE67selHack { color: green; }
+:root *> .allButIE678selHack { color: green; }
+.notIE8:target, .allButIE8selHack { color: green; }
+
+.IE6attrHack, .IE67attrHack, .IE678attrHack, .IE6789attrHack,
+.IE789attrHack, .IE89attrHack, .allButIE6attrHack { color: #CCC; }
+.IE6attrHack { _color: green; }
+.IE67attrHack { *color: green; }
+.IE6789attrHack { color: green\9; }
+.IE789attrHack { color /**/: green\9; }
+.allButIE6attrHack { color /**/: green; }
+.IE89attrHack { color: green\0/; }

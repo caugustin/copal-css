@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<title>Framed Images with PIE</title>
+
+<style>
+	#Content-static {
+		background: gray;
+		padding: 10px;
+		margin: 10px;
+	}
+	#Content-relative {
+		background: gray;
+		padding: 10px;
+		margin: 10px;
+		position: relative;
+	}
+	#Content-float {
+		background: gray;
+		padding: 10px;
+		margin: 10px;
+		float: left;
+		width: 400px;
+		*display: inline;
+	}
+	img { 
+		vertical-align: middle;
+		*vertical-align: bottom;          /* IE67 */
+		-ms-interpolation-mode: bicubic;
+	}
+	a img {
+		border-style: none;
+	}
+	.figure {
+		background: yellow;
+		border: 3px solid green;
+		padding: 10px 0 10px 0;
+	}
+	.scale { width: 200px; }
+	.scale img { width: 100%; height: auto; }
+
+	.framed, .framed span, .rounded, .rounded span {
+		display: inline-block;
+		*vertical-align: bottom;          /* IE67 */
+	}
+	.framed, .rounded {
+		position: relative;
+		z-index: 0;
+		background: aqua;
+	}
+	.framed > span {
+		border: 3px dashed red;
+		position: relative;      /* IE8 needs it */
+		*position: static;       /* IE67 don't like it */
+	}
+	.framed span span {
+		margin: -3px;
+	}
+	.framed img {
+		position: relative;
+		z-index: -1;
+	}
+	.rounded > span, .rounded img {
+		border-radius: 10px;
+		behavior: url(../_htc_/PIE/PIE.htc);
+	}
+	
+	/* ".angled" could be used for sharp corners if rounded corners are the default. */
+	
+</style>
+</head>
+<body>
+
+<div id="Content-static">
+
+<div class="figure">
+	<a class="framed" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+<div class="figure scale">
+	<a class="framed" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+</div>
+
+<div id="Content-static">
+
+<div class="figure">
+	<a class="framed rounded" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+<div class="figure scale">
+	<a class="framed rounded" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+</div>
+
+<div id="Content-static">
+
+<div class="figure">
+	<a class="rounded" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+<div class="figure scale">
+	<a class="rounded" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+</div>
+
+<div id="Content-relative">
+
+<div class="figure">
+	<a href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+<div class="figure scale">
+	<a href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+</div>
+
+<div id="Content-float">
+
+<div class="figure">
+	<a class="framed" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+<div class="figure scale">
+	<a class="framed" href="#"><span><span><img src="_media_/test_img_2x.gif" alt="" width="238" height="160" /></span></span></a>
+</div><!-- /figure -->
+
+</div>
+
+
+<br clear="all" />
+
+<ul>
+<li>Firefox 3+ (rounded corners 4+)</li>
+<li>Internet Explorer 7+ (7 with problems)</li>
+<li>WebKit current</li>
+<li>Opera 10+ (perhaps earlier too, can't test it, rounded corners 12+)</li>
+</ul>
+
+  
+</body>
+</html>
