@@ -1,0 +1,149 @@
+/* copal/grids/columns-24-168-264-552-744px.css -- copal-css.net */
+
+#Content             { width: 552px; }
+.showLayout #Content,
+.showLayout .full        { background-image: url(_/cols.24.24.png); }
+* html .showLayout #Content,
+* html .showLayout .full { background-image: url(_/hgrid.24.24.gif); }
+
+.cols                { margin-right: -30px; }
+
+.col,
+.mainCol,
+.marginCol,
+.full .mainCol,
+.full .marginCol     { margin-right:  24px; }
+
+.lf, .leftFloat,
+.fl, .floatLeft      { margin-right:  24px; }
+.rf, .rightFloat,
+.fr, .floatRight     { margin-left:   24px; }
+
+* html .lf,
+* html .leftFloat,
+* html .fl,
+* html .floatLeft    { margin-right:  21px; }
+* html .rf,
+* html .rightFloat,
+* html .fr,
+* html .floatRight   { margin-left:   21px; }
+
+.colLayout td,
+.colLayout th        { padding-left:  24px; }
+
+.aside               { width: 168px; margin-left: 24px; margin-right: -192px; }
+
+.half, .col          { width: 264px; }
+.third,
+.margin, .marginCol  { width: 168px; }
+.twoThirds,
+.main, .mainCol      { width: 360px; }
+.fourth              { width: 120px; }
+.threeFourths        { width: 408px; }
+.sixth               { width:  72px; }
+.fiveSixths          { width: 456px; }
+
+.full                { width: 744px; margin-right: -192px; }
+.full .main,
+.full .mainCol       { width: 552px; }
+.full .margin,
+.full .marginCol     { width: 168px; }
+
+.wg           { width:   24px; }
+.w1,  .one    { width:   24px; }
+.w2,  .two    { width:   72px; }
+.w3,  .three  { width:  120px; }
+.w4,  .four   { width:  168px; }
+.w5,  .five   { width:  216px; }
+.w6,  .six    { width:  264px; }
+.w7,  .seven  { width:  312px; }
+.w8,  .eight  { width:  360px; }
+.w9,  .nine   { width:  408px; }
+.w10, .ten    { width:  456px; }
+.w11, .eleven { width:  504px; }
+.w12, .twelve { width:  552px; }
+.w13          { width:  600px; }
+.w14          { width:  648px; }
+.w15          { width:  696px; }
+.w16          { width:  744px; }
+.w17          { width:  792px; }
+.w18          { width:  840px; }
+.w19          { width:  888px; }
+.w20          { width:  936px; }
+.w21          { width:  984px; }
+.w22          { width: 1032px; }
+.w23          { width: 1080px; }
+.w24          { width: 1128px; }
+
+.lg   { margin-left:    24px; }
+.l1   { margin-left:    48px; }
+.l2   { margin-left:    96px; }
+.l3   { margin-left:   144px; }
+.l4   { margin-left:   192px; }
+.l5   { margin-left:   240px; }
+.l6   { margin-left:   288px; }
+.l7   { margin-left:   336px; }
+.l8   { margin-left:   384px; }
+.l9   { margin-left:   432px; }
+.l10  { margin-left:   480px; }
+.l11  { margin-left:   528px; }
+.l12  { margin-left:   576px; }
+.l13  { margin-left:   624px; }
+.l14  { margin-left:   672px; }
+.l15  { margin-left:   720px; }
+.l16  { margin-left:   768px; }
+
+.l-g  { margin-left:   -24px; }
+.l-1  { margin-left:   -48px; }
+.l-2  { margin-left:   -96px; }
+.l-3  { margin-left:  -144px; }
+.l-4  { margin-left:  -192px; }
+.l-5  { margin-left:  -240px; }
+.l-6  { margin-left:  -288px; }
+.l-7  { margin-left:  -336px; }
+.l-8  { margin-left:  -384px; }
+.l-9  { margin-left:  -432px; }
+.l-10 { margin-left:  -480px; }
+.l-11 { margin-left:  -528px; }
+.l-12 { margin-left:  -576px; }
+.l-13 { margin-left:  -624px; }
+.l-14 { margin-left:  -672px; }
+.l-15 { margin-left:  -720px; }
+.l-16 { margin-left:  -768px; }
+
+.rg   { margin-right:   24px; }
+.r1   { margin-right:   48px; }
+.r2   { margin-right:   96px; }
+.r3   { margin-right:  144px; }
+.r4   { margin-right:  192px; }
+.r5   { margin-right:  240px; }
+.r6   { margin-right:  288px; }
+.r7   { margin-right:  336px; }
+.r8   { margin-right:  384px; }
+.r9   { margin-right:  432px; }
+.r10  { margin-right:  480px; }
+.r11  { margin-right:  528px; }
+.r12  { margin-right:  576px; }
+.r13  { margin-right:  624px; }
+.r14  { margin-right:  672px; }
+.r15  { margin-right:  720px; }
+.r16  { margin-right:  768px; }
+
+.r-g  { margin-right:  -24px; }
+.r-1  { margin-right:  -48px; }
+.r-2  { margin-right:  -96px; }
+.r-3  { margin-right: -144px; }
+.r-4  { margin-right: -192px; }
+.r-5  { margin-right: -240px; }
+.r-6  { margin-right: -288px; }
+.r-7  { margin-right: -336px; }
+.r-8  { margin-right: -384px; }
+.r-9  { margin-right: -432px; }
+.r-10 { margin-right: -480px; }
+.r-11 { margin-right: -528px; }
+.r-12 { margin-right: -576px; }
+.r-13 { margin-right: -624px; }
+.r-14 { margin-right: -672px; }
+.r-15 { margin-right: -720px; }
+.r-16 { margin-right: -768px; }
+

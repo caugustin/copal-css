@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
-<html class="no-js">
+<!--[if lt IE 7 ]>     <html class="no-js ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7" lang="en"> <![endif]-->
+<!--[if IE 7 ]>        <html class="no-js ie ie7 ie-lt10 ie-lt9 ie-lt8" lang="en"> <![endif]-->
+<!--[if IE 8 ]>        <html class="no-js ie ie8 ie-lt10 ie-lt9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>        <html class="no-js ie ie9 ie-lt10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta charset="utf-8" />
@@ -10,30 +14,58 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="imagetoolbar" content="no" />
 
-	<link rel="stylesheet" type="text/css" href="../test-ie-hacks.css" />
+	<link rel="stylesheet" type="text/css" href="ie-hacks.css" />
 
 </head>
 <body class="testpage">
 
 <h3>Testing IE Hacks</h3>
 
+
+
+<h4>Conditional HTML Element CSS Classes</h4>
+
+<ul>
+	<li class="is-ie">.ie</li>
+</ul>
+
+<ul class="only-ie">
+	<li class="is-ie6">.ie6</li>
+	<li class="is-ie7">.ie7</li>
+	<li class="is-ie8">.ie8</li>
+	<li class="is-ie9">.ie9</li>
+</ul>
+
+<ul class="only-ie">
+	<li class="is-ie-lt7">.ie-lt7</li>
+	<li class="is-ie-lt8">.ie-lt8</li>
+	<li class="is-ie-lt9">.ie-lt9</li>
+	<li class="is-ie-lt10">.ie-lt10</li>
+</ul>
+
+
+
 <h4>Selector Hacks</h4>
+
 <ul>
 	<li class="IE6selHack">IE6 only selector hack</li>
 	<li class="IE7selHack">IE7 only selector hack</li>
 	<li class="allButIE6selHack">all but IE6 selector hack</li>
-	<li class="allButIE67selHack">all but IE6+7 selector hack</li>
-	<li class="allButIE678selHack">all but IE6+7+8 selector hack</li>
+	<li class="allButIE67selHack">all but IE67 selector hack</li>
+	<li class="allButIE678selHack">all but IE678 selector hack</li>
 	<li class="allButIE8selHack">all but IE8 selector hack</li>
 </ul>
 
+
+
 <h4>Attribute Hacks</h4>
+
 <ul>
 	<li class="IE6attrHack">IE6 onyl attribute hack</li>
-	<li class="IE67attrHack">IE6+7 attribute hack</li>
-	<li class="IE6789attrHack">IE6+7+8+9 attribute hack</li>
-	<li class="IE789attrHack">IE7+8+9 attribute hack</li>
-	<li class="IE89attrHack">IE8+9 attribute hack</li>
+	<li class="IE67attrHack">IE67 attribute hack</li>
+	<li class="IE6789attrHack">IE6789 attribute hack</li>
+	<li class="IE789attrHack">IE789 attribute hack</li>
+	<li class="IE89attrHack">IE89 attribute hack</li>
 	<li class="allButIE6attrHack">all but IE6 attribute hack</li>
 </ul>
 
@@ -41,6 +73,7 @@
 <ul>
 	<li class="IE8mediaHack">IE8 only <code>@media</code> hack</li>
 </ul>
+
 
 
 </body>

@@ -1,9 +1,9 @@
-/* centered.css -- copal-css.net 2013-07-12 */
+/* copal/centered.css -- copal-css.net 2013-08-27 */
 
 body  { 
 	text-align: center;   /* Centered page layout MSIE/Win */
 }
-#Page { 
+.Page { 
 	margin: 0 auto;       /* Centered page layout other than MSIE/Win */
 	width: 90%;           /* Overwrite this in custom layout.css */
 }

@@ -1,0 +1,84 @@
+/* copal/_test_/ie-hacks -- copal-css.net, 2013-07-12 */
+
+
+
+/* Selector hacks ... */
+
+.IE6selHack,
+.IE7selHack,
+.allButIE6selHack,
+.allButIE67selHack,
+.allButIE678selHack,
+.allButIE8selHack {
+	color: #CCC;
+}
+
+* html .IE6selHack                { color: green; }
+*+html .IE7selHack                { color: green; }
+html>body .allButIE6selHack       { color: green; }
+html>/**/body .allButIE67selHack  { color: green; }
+:root .allButIE678selHack      { color: green; }
+.notIE8:target, .allButIE8selHack { color: green; }
+
+
+
+/* Attribute hacks ... */
+
+.IE6attrHack,
+.IE67attrHack,
+.IE678attrHack,
+.IE6789attrHack,
+.IE789attrHack,
+.IE89attrHack,
+.allButIE6attrHack {
+	color: #CCC;
+}
+
+.IE6attrHack       { _color: green; }
+.IE67attrHack      { *color: green; }
+.IE6789attrHack    { color: green\9; }
+.IE789attrHack     { color /**/: green\9; }
+.IE89attrHack      { color: green\0/; }
+.allButIE6attrHack { color /**/: green; }
+
+
+
+/* @media hacks ... */
+
+.IE8mediaHack {
+	color: #CCC;
+}
+
+@media \0screen, \0print { .IE8mediaHack { color: green; } }
+
+
+
+/* Check conditional comments classes ... */
+
+.is-ie,
+.is-ie6,
+.is-ie7,
+.is-ie8,
+.is-ie9,
+.is-ie-lt7,
+.is-ie-lt8,
+.is-ie-lt9,
+.is-ie-lt10 {
+	color: #CCC;
+}
+
+.ie .is-ie,
+.ie6 .is-ie6,
+.ie7 .is-ie7,
+.ie8 .is-ie8,
+.ie9 .is-ie9,
+.ie-lt7 .is-ie-lt7,
+.ie-lt8 .is-ie-lt8,
+.ie-lt9 .is-ie-lt9,
+.ie-lt10 .is-ie-lt10 {
+	color: green;
+}
+
+.only-ie     { display: none; }
+.ie .only-ie { display: block; }
+

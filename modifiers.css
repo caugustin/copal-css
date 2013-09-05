@@ -1,0 +1,105 @@
+/* copal/modifiers.css -- Generic modifiers for copal-css.net, 2013-08-27 */
+
+
+.nobr       { white-space: nowrap !important; }
+
+.l, .left   { text-align: left !important; }
+.c, .center { text-align: center !important; }
+.r, .right  { text-align: right !important; }
+
+.t, .top    { vertical-align: top !important; }
+.m, .middle { vertical-align: middle !important; }
+.b, .bottom { vertical-align: bottom !important; }
+
+.fl, .floatLeft  {
+	float: left !important;
+	/* IE67: */ *display: inline;
+	/* IE67: */ *position: relative;
+}
+.fr, .floatRight {
+	float: right !important;
+	/* IE67: */ *display: inline;
+	/* IE67: */ *position: relative;
+}
+.cf, .clearFloat { clear: both !important; }
+.cl, .clearLeft  { clear: left !important; }
+.cr, .clearRight { clear: right !important; }
+
+.scale, .hScale     { width: 100% !important; height: auto !important; }
+.vScale             { width: auto !important; height: 100% !important; }
+.stretch, .hStretch { width: 100% !important; }
+.vStretch           { height: 100% !important; }
+.noScale            { width: auto !important; height: auto !important; }
+
+.seamless, .seamless * {
+	margin: 0 !important;
+	padding: 0 !important;
+	/* vertical-align: bottom !important; */
+}
+
+.invisible     { visibility: hidden !important; }
+
+@media screen  { .print, .hideOnScreen { display: none !important; } }
+@media print   { .screen, .hideInPrint { display: none !important; } }
+
+.avoidPageBreakInside { page-break-inside: avoid !important; }
+.avoidPageBreakBefore { page-break-before: avoid !important; }
+.avoidPageBreakAfter  { page-break-after: avoid !important; }
+.pageBreakBefore      { page-break-before: always !important; }
+.pageBreakAfter       { page-break-after: always !important; }
+
+
+/* Generic modifiers that may need customization ... */
+
+.narrow    { word-spacing: -0.2em  !important; } /* Change in custom css! */
+.breakable { word-spacing: -0.33em !important; } /* Change in custom css! */
+.shade     { background-color: #E8E8E8; }        /* Change in custom css! */
+.border    { border: 1px solid black; }          /* Change in custom css! */
+
+
+
+/* Some common classes and CargoCult from other sources ... */
+
+/* h5bp.com/q and https://gist.github.com/935783/ - using legacy version */
+/* Normally not needed with CoPaL layout elements - they already use it! */ 
+.clearfix { /* IE 67 */
+    *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");    
+    *zoom: 1; /* non-JS fallback */
+}
+.clearfix:before,
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden;
+    visibility: hidden; 
+}
+.clearfix:after { clear: both; }
+
+/* Hide from both screenreaders and browsers, see h5bp.com/u */
+.hidden, .hide { display: none !important; visibility: hidden !important; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+	/* CargoCult for now, has to be adapted for CoPaL! */
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	/* CargoCult for now, has to be adapted for CoPaL! */
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+

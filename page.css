@@ -1,82 +1,98 @@
-/* page.css -- copal-css.net, 2013-07-12 */
+/* copal/page.css -- copal-css.net, 2013-08-29 */
 
-#Page { 
+.Page { 
 	position: relative;
-	text-align: left;     /* Undo occasional "text-align: center" from body */
+	text-align: left;    /* Undo occasional "text-align: center" from body */
+	/* IE67: */ *zoom: 1;
 }
-#Header {
+.Header {
 	position: relative;
 	float: none;
 	clear: both;
+	/* IE67: */ *zoom: 1;
 }
-#Header:after {
+.Header:after {
 	content: "."; display: block; height: 0; visibility: hidden; clear: both;
 }
-#Logo {
+.Logo {
 	position: relative;
 	float: left;
+	/* IE67: */ *display: inline;
 }
 @media print {
-	#Logo img.print { display: inline !important; }
+	.Logo img.print { display: inline !important; }
 }
-#HeaderTitle {
+.HeaderTitle {
 	position: relative;
 	float: left;
+	/* IE67: */ *display: inline;
 }
-#MetaNavigation {
+.MetaNavigation {
 	position: relative;
 	float: right;
+	/* IE67: */ *display: inline;
 }
-#Main {
+.Main {
 	position: relative;
 	clear: both;
+	/* IE67: */ *zoom: 1;
 }
-#Main:before, #Main:after {
+.Main:before, .Main:after {
 	content: "."; display: block; height: 0; visibility: hidden; clear: both;
 }
-#AreaNavigation {
+.AreaNavigation {
 	position: relative;
 	clear: both;
+	/* IE67: */ *zoom: 1;
+	/* IE6:  */ _float: left;
+	/* IE6:  */ _display: inline;
 }
-#AreaNavigation ul {
+.AreaNavigation ul {
 	position: relative;
 	clear: both;
+	/* IE67: */ *zoom: 1;
 }
-#AreaNavigation ul:before, #AreaNavigation ul:after {
+.AreaNavigation ul:before, .AreaNavigation ul:after {
 	content: "."; display: block; height: 0; visibility: hidden; clear: both;
 }
-#AreaNavigation ul li {
+.AreaNavigation ul li {
 	position: relative;
 	float: left;
+	/* IE67: */ *display: inline;
 }
-#Menu {
+.Menu {
 	position: relative;
 }
-#Breadcrumb {
+.Breadcrumb {
 	position: relative;
+	/* IE67: */ *zoom: 1;
 }
-#Navigation {
+.Navigation {
 	position: relative;
 	float: left;
 	width: 20%;
-	padding-bottom: 1em; /* Force #Navigation to occupy space */
+	/* IE67: */ *display: inline;
+	padding-bottom: 1em; /* Occupy space when empty, change in custom CSS! */
 }
-#Content {
+.Content {
 	position: relative;
 	float: left;
 	width: 55%;
-	padding-bottom: 1em; /* Force #Content to occupy space */
+	/* IE67: */ *display: inline;
+	padding-bottom: 1em; /* Occupy space when empty, change in custom CSS! */
 }
-#Sidebar {
+.Sidebar {
 	position: relative;
 	float: right;
 	width: 20%;
-	padding-bottom: 1em; /* Force #Sidebar to occupy space */
+	/* IE67: */ *display: inline;
+	padding-bottom: 1em; /* Occupy space when empty, change in custom CSS! */
 }
-#Footer {
+.Footer {
 	position: relative;
 	float: none;
 	clear: both;
+	/* IE67: */ *zoom: 1;
 }
 
 

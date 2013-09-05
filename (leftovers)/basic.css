@@ -1,0 +1,202 @@
+/* basic.css -- copal-css.net, 2013-07-12 */
+
+/*
+	Learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer			http://ericmeyer.com
+	HTML5 Boilerplate	http://html5boilerplate.com
+	HTML5 Doctor		http://html5doctor.com
+	HTML5 Reset         http://html5reset.org/
+	Paul Irish			http://paulirish.com/
+	
+	and others ... (and some I've come up with by myself)
+
+*/
+
+
+/* Basic cleanup ... */
+
+*, table, th, td { margin: 0; padding: 0; font-size: 100%; text-align: left; }
+table { border-collapse: collapse; }
+td, th { vertical-align: top; }
+img, object, table, th, td { border: none; background: transparent; }
+
+
+/* Global fix of the Italics bugs in IE 5.x and IE 6 */
+
+* html body *     { /* IE6: */ overflow: visible; }
+* html iframe,
+* html frame      { /* IE6: */ overflow: auto; }
+* html frameset   { /* IE6: */ overflow: hidden }
+
+
+/* Some IE fixes ... */
+/* The first one is essential in IE7 for correct layout scaling.       */
+/* CargoCult at the moment, not sure of their necessity! caugustin.de  */
+
+*+html body       { /* IE7: */ position: relative; }
+* html body       { /* IE6: */ position: static; }
+* html textarea   { /* IE6: */ overflow: scroll; overflow-x: hidden; }
+* html input      { /* IE6: */ overflow: hidden; }
+* html body ol li { /* IE6: */ display: list-item; }
+
+
+/* Body settings ... */
+
+html { overflow-y: scroll; } /* Force vertical scrollbar */
+body { text-rendering: optimizeLegibility; }
+
+
+/* Paged media settings ... */
+
+h1, h2, h3, h4, h5, h6, dt, thead {
+	page-break-inside: avoid;
+	page-break-after: avoid;
+}
+thead {
+	display: table-header-group; /* h5bp.com/t */
+}
+.legend, figcaption, .figcaption, dd, tfoot {
+	page-break-inside: avoid;
+	page-break-before: avoid;
+}
+li, tr, th, td, address, img, object, figure, .figure {
+	page-break-inside: avoid;
+}
+hr, .hr, .break, .space {
+	page-break-before: avoid;
+}
+p { orphans: 3; widows: 3; }
+
+
+
+
+
+/* ******************************
+
+   Content elements
+
+   ****************************** */
+
+
+/* Headlines ... */
+
+h1, h2, h3, h4, h5, h6 { position: relative; }
+
+
+/* Pre ... */
+
+pre { /* http://html5reset.org/ */
+	white-space: pre;      /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+@media screen { pre { overflow: auto; } } /* caugustin.de: Still needed? */
+
+
+/* Lists ... */
+
+/*
+ul, ol, li, dl { position: relative; }
+dt { font-weight: bold; }
+*/
+
+
+/* ******************************
+
+   Media elements
+
+   ****************************** */
+
+
+img, object, audio, video {
+	vertical-align: middle;
+	/* IE67: */ *vertical-align: bottom;
+}
+img {
+	-ms-interpolation-mode: bicubic;
+}
+.dummy, .missing { width: 100%; }
+img.dummy   { background-color: gray; }
+img.missing { background-color: fuchsia; }
+
+.figure {
+	position: relative;
+}
+.figure p, .figcaption {
+	position: relative;
+}
+
+
+
+
+/* ******************************
+
+   Tables
+
+   ****************************** */
+
+
+.table {
+	position: relative;
+	/* IE67: */ *zoom: 1;
+}
+.table table {
+	position: relative; /* IE67 needs it, helps with all other browsers too! */
+	width: 100%;
+}
+
+
+
+
+/* ******************************
+
+   Links
+
+   ****************************** */
+
+a               { color: gray; }
+a[name]         { color: inherit; }
+a:link          { color: blue; }
+a:visited       { color: purple; }
+a:link:hover,
+a:visited:hover { color: red; }
+a:active        { color: orange; }
+
+
+
+/* ******************************
+
+   Text markup
+
+   ****************************** */
+
+
+b, strong  { font-weight: bold; }
+i, em, var { font-style: italic; }
+.formula   { word-spacing: -0.2em; }
+sub, sup { /* Based on h5bp.com/k */
+	font-size: 0.8em;
+	/* IE6789: */ font-size: 0.9em\9;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+abbr, acronym {
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: inherit;
+	text-transform: inherit;
+	border-bottom: inherit;
+}
+abbr, acronym, .num {
+	white-space: nowrap;
+	word-spacing: -0.2em;
+}
+mark, .mark, .mark * { background-color: yellow; }
+.weak, .weak *       { color: gray; }
+
+

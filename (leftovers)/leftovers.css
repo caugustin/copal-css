@@ -1,0 +1,361 @@
+/* leftovers.css -- copal-css.net, 2013-08-27 */
+
+
+/* ******************************
+
+   Content elements
+
+   ****************************** */
+
+
+/* Separators ... */
+/* TODO: Fallback and screen/print option with background-image for IE678 */
+
+hr, .hr { /* .hr is the replacement div of msie.hr.htc for IE678 */
+	height: 1em;        /* Change this in custom css! */
+	text-align: center; /* Change this in custom css! */
+	top: 0.5em;         /* Change this in custom css! */
+	border: none;
+	background: none;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+}
+hr:before, .hr:before {             /* All and IE8 */
+	content: url(../../custom/css/_/hr.png);
+}
+hr.break:before, .hr.break:before { /* All and IE8 */
+	content: url(../../custom/css/_/hr.break.png);
+}
+hr.space:before, .hr.space:before { /* All and IE8 */
+	content: '';
+}
+.hr     { width: 100%; }         /* IE678 */
+.hr img { vertical-align: top; } /* IE678 */
+* html hr  { margin-top: -7px; margin-bottom: -7px; } /* IE6 */
+*+html hr  { margin-top: -7px; margin-bottom: -7px; } /* IE7 */
+
+
+/* Lists ... */
+
+ul, ol, li, dl { position: relative; }
+dt { font-weight: bold; }
+
+/* List indentations ... */
+li { margin-left: 2em; padding-left: 0; }
+li.ulChild { margin-left: 16px; } /* MSIE 6 */      /* Change in custom css! */
+ul>li      { margin-left: 16px; }                   /* Change in custom css! */
+
+ol>/**/li      { margin-left: 1.5em; }              /* Change in custom css! */
+
+li.olLongChild { margin-left: 2.5em; } /* MSIE 6 */ /* Change in custom css! */
+ol.long>li     { margin-left: 2.5em; } /* MSIE 7 */ /* Change in custom css! */
+ol.long>/**/li { margin-left: 2em; }                /* Change in custom css! */
+
+ol ol ol li.olChild { margin-left: 3em; } /* MSIE 6 */
+ol ol ol>li         { margin-left: 3em; } /* MSIE 7 */
+ol ol ol>/**/li     { margin-left: 2.5em; }
+
+/* List-style image settings ... */
+li.msieLiActive { list-style-type: none; }
+ul>/**/li       { list-style-type: none; }
+img.msieLiBefore {
+	left: -16px;        /* Change this in custom css! */
+	margin-top: 0.54em; /* Change this in custom css! */
+	top: -3px;          /* Change this in custom css! */
+	position: absolute;
+	width: auto;  /* Silly MSIE 6! */
+	height: auto; /* Silly MSIE 6! */
+}
+ul>/**/li:before {
+	left: -16px;        /* Change this in custom css! */
+	margin-top: 0.54em; /* Change this in custom css! */
+	top: -3px;          /* Change this in custom css! */
+	position: absolute;
+}
+
+/* Pre Gecko 1.9.1/FF 3.5: No :before/:after content positioning ... */
+.noBeforeAfterPos ul>/**/li:before { vertical-align: middle; margin-top: 0; }
+.noBeforeAfterPos ol>/**/li { text-indent: 0; }
+.noBeforeAfterPos ul>/**/li {
+	text-indent: -16px; /* Change this in custom css! */
+}
+.no-contentposition ul>/**/li:before { vertical-align: middle; margin-top: 0; }
+.no-contentposition ol>/**/li { text-indent: 0; }
+.no-contentposition ul>/**/li {
+	text-indent: -16px; /* Change this in custom css! */
+}
+
+/* List-style settings ... */
+ul>/**/li:before { content: url(../../custom/css/_/ul.li.1.png); }
+ul ul>/**/li:before { content: url(../../custom/css/_/ul.li.2.png); }
+ul ul ul>/**/li:before { content: url(../../custom/css/_/ul.li.3.png); }
+ul ul ul ul>/**/li:before { content: url(../../custom/css/_/ul.li.4.png); }
+ul.links>/**/li:before { content: url(../../custom/css/_/ul.li.links.png); }
+ul.downloads>/**/li:before {
+	content: url(../../custom/css/_/ul.li.downloads.png);
+}
+ul.links>/**/li.mailto:before  {
+	content: url(../../custom/css/_/ul.li.mailto.png);
+}
+ul.links>/**/li.printer:before {
+	content: url(../../custom/css/_/ul.li.printer.png);
+}
+ul.links>/**/li.download:before {
+	content: url(../../custom/css/_/ul.li.downloads.png);
+}
+ul.links>/**/li.image:before,
+ul.downloads>/**/li.image:before {
+	content: url(../../custom/css/_/ul.li.image.png);
+}
+ul.links>/**/li.pdf:before,
+ul.downloads>/**/li.pdf:before {
+	content: url(../../custom/css/_/ul.li.pdf.png);
+}
+ul.links>/**/li.txt:before,
+ul.downloads>/**/li.txt:before {
+	content: url(../../custom/css/_/ul.li.txt.png);
+}
+
+ol ol { list-style-type: lower-alpha; }
+ol ol ol { list-style-type: upper-roman; }
+ol ol ol ol { list-style-type: lower-roman; }
+ol.decimal     { list-style-type: decimal !important; }
+ol.leadingZero { list-style-type: decimal-leading-zero !important; }
+ol.alpha       { list-style-type: upper-alpha !important; }
+ol.lowerAlpha  { list-style-type: lower-alpha !important; }
+ol.roman       { list-style-type: upper-roman !important; }
+ol.lowerRoman  { list-style-type: lower-roman !important; }
+
+/* Nested lists and paragraphs margin and padding reset ... */
+ul ul, ul ol, ul dl, ul p,
+ol ol, ol ul, ol dl, ol p,
+dl ul, dl ol, dl dl, dl p,
+ul.wide, ol.wide, dl.wide,
+.wide ul li, .wide ul p, .wide ul ul, .wide ul ol, .wide ul dl,
+.wide ol li, .wide ol p, .wide ol ul, .wide ol ol, .wide ol dl,
+.wide dl dt, .wide dl p, .wide dl ul, .wide dl ol, .wide dl dl {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+
+
+
+
+/* ******************************
+
+   Generic modifiers
+
+   ****************************** */
+
+
+.near       { padding-top: 0; margin-top: 0 }
+
+
+
+
+/* ******************************
+
+   Layout elements
+
+   ****************************** */
+
+
+.aside {
+	float: right;
+	width: 28%;
+	margin-right: -31%;
+	/* IE6: */ _display: inline;
+	/* IE6: */ _position: relative;
+}
+
+.block, .full, .cols {
+	position: relative;
+	clear: left;
+    /* IE67: */ *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");    
+    /* IE67: */ *zoom: 1;
+}
+.block:before, .block:after,
+.full:before, .full:after,
+.cols:before, .cols:after {
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden;
+    visibility: hidden; 
+}
+.block:after, .full:after, .cols:after { clear: left; }
+
+.full {
+	width: 134.6%;
+	margin-right: -34.6%;
+}
+.cols { margin-right: -6%; }
+.col, .mainCol, .marginCol {
+	float: left;
+	position: relative;
+	margin-left: 4%;
+	/* IE6: */ _display: inline;
+}
+* html .col { /* IE6 hack for first column container, with performance-hack */
+	_float: expression(
+		this.runtimeStyle.float = 'left',
+		(
+			(this.parentElement.children[0] == this)
+			? this.className += ' firstCol'
+			: null
+		)
+	);
+	_float: left;
+}
+.mainCol, .col:first-child { margin-left: 0; }
+* html .firstCol { margin-left: 0; /* IE6 */ }
+
+.full .marginCol    { margin-left: 2.9%; }
+
+.colLayout td.leftmost,
+.colLayout th.leftmost  { padding-left: 0; }
+
+
+
+
+/* ******************************
+
+   Column modifiers
+
+   ****************************** */
+
+
+/*
+	TODO:
+	Special relative widths for WebKit - it tends to render columns to small.
+	Widths for floats (have to be different, because the context differs).
+*/
+
+.col, .half, .six, .wHalf, .fullHalf                      { width: 45.18%; }
+.third, .four, .margin, .marginCol, .wThird, .fullThird   { width: 28.79%; }
+.twoThirds, .eight, .mainCol, .wTwoThirds, .fullTwoThirds { width: 61.58%; }
+.fourth       { width: 20.59%; }
+.threeFourths { width: 69.78%; }
+
+.full .marginCol { width: 21.35%; }
+.full .mainCol   { width: 70.09%; }
+
+.g0  { margin-left:   0 !important; } /* No gutter! Same as .l0 ... */
+.w0  { width:         0 !important; }
+.wg  { width:         4%; }
+.l0  { margin-left:   0 !important; }
+.lg  { margin-left:   4%; }
+.l-g { margin-left:  -4%; }
+.r0  { margin-right:  0 !important; }
+.rg  { margin-right:  4%; }
+.r-g { margin-right: -4%; }
+
+
+
+
+/* ******************************
+
+   Content modules
+
+   ****************************** */
+
+
+.box {
+	clear: both;
+	position: relative;
+	background-color: silver;
+	*zoom: 1; /* IE67 - yes, IE7 needs it too! */
+}
+.box:before, .box:after {
+	/* TODO: Could :after and clear:left be enough? */
+	content: "."; display: block; height: 0; visibility: hidden; clear: both;
+}
+
+
+
+
+
+/* ******************************
+
+   Components
+
+   ****************************** */
+
+
+.testpages                { display: none; }
+.showLayout div.testpages,
+.testpage div.testpages,
+.showLayout li.testpages,
+.testpage li.testpages    { display: block; }
+.showLayout span.testpages,
+.testpage span.testpages,
+.showLayout a.testpages,
+.testpage a.testpages     { display: inline; }
+
+
+/* Printer icon support ... */
+
+.printer { display: none; }
+.jsPrint li.printer { display: block; }
+.jsPrint a.printer { display: inline; }
+@media print {
+	.printer { display: none; }
+}
+
+
+/* Outline ... */
+
+.outline ul, .outline li {
+	/* position: relative; */ /* Already given in basic settings ... */
+}
+ul.outline li {
+	margin-left: 0;
+	text-indent: 0 !important;
+}
+ul.outline li:before,
+ul.outline img.msieLiBefore,
+.outline .branchClosed ul {
+	display: none;
+}
+
+
+
+
+
+/* ******************************
+
+   Forms
+
+   ****************************** */
+
+
+
+
+
+
+/* ******************************
+
+   Annotations
+
+   ****************************** */
+
+
+del, del *                 { text-decoration: line-through; color: gray; }
+ins, ins *                 { text-decoration: underline; color: green; }
+.annotation, .annotation * { color: red; }
+.highlight, .highlight *   { background-color: yellow; }
+.dim, .dim *               { color: gray; }
+
+.hideAnnotations del          { display: none; }
+.hideAnnotations ins,
+.hideAnnotations ins *        { text-decoration: inherit; color: inherit; }
+.hideAnnotations .annotation  { display: none; }
+.hideAnnotations .highlight,
+.hideAnnotations .highlight * { background-color: inherit; }
+.hideAnnotations .dim         { display: none; }
+
+
+

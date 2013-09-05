@@ -1,0 +1,54 @@
+/* copal/content.css -- copal-css.net, 2013-09-03 */
+
+/*
+    ~~~~~~~~~~~~
+	
+	-  Defines additional content element classes.
+	-  Further default styling.
+	
+    ~~~~~~~~~~~~
+    
+    
+    == ToDos ==
+    
+    !  Better HR styling.
+    
+    
+    == History ==
+
+	2013-09-03 caugustin.de:   Initial setup.
+    
+
+*/
+
+
+h1, h2, h3, h4, h5, h6 { position: relative; }
+
+.table {
+	position: relative;
+	/* IE67: */ *zoom: 1;
+}
+.table table {
+	position: relative; /* IE67 needs it, helps with all other browsers too! */
+	width: 100%;
+}
+
+.dummy, .missing { width: 100%; }
+img.dummy   { background-color: gray; }
+img.missing { background-color: fuchsia; }
+
+.figure {
+	position: relative;
+}
+.figure p, .figcaption {
+	position: relative;
+}
+
+.formula   { word-spacing: -0.2em; }
+
+.num {
+	white-space: nowrap;
+	word-spacing: -0.2em;
+}
+
+.weak, .weak *       { color: gray; }

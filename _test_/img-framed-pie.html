@@ -23,10 +23,11 @@
 		float: left;
 		width: 400px;
 		*display: inline;
+		*zoom: 1;
 	}
 	img { 
 		vertical-align: middle;
-		*vertical-align: bottom;          /* IE67 */
+		*vertical-align: bottom;        /* IE67 */
 		-ms-interpolation-mode: bicubic;
 	}
 	a img {
@@ -42,26 +43,30 @@
 
 	.framed, .framed span, .rounded, .rounded span {
 		display: inline-block;
-		*vertical-align: bottom;          /* IE67 */
+		*vertical-align: bottom;        /* IE67 */
 	}
 	.framed, .rounded {
 		position: relative;
 		z-index: 0;
 		background: aqua;
 	}
-	.framed > span {
+	.framed span {
 		border: 3px dashed red;
 		position: relative;      /* IE8 needs it */
 		*position: static;       /* IE67 don't like it */
 	}
 	.framed span span {
+		border: none;
 		margin: -3px;
 	}
 	.framed img {
 		position: relative;
-		z-index: -1;
+		z-index: -2;
 	}
 	.rounded > span, .rounded img {
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-o-border-radius: 10px;
 		border-radius: 10px;
 		behavior: url(../_htc_/PIE/PIE.htc);
 	}
@@ -137,7 +142,7 @@
 
 <ul>
 <li>Firefox 3+ (rounded corners 4+)</li>
-<li>Internet Explorer 7+ (7 with problems)</li>
+<li>Internet Explorer 6+ (6 without rounded corners)</li>
 <li>WebKit current</li>
 <li>Opera 10+ (perhaps earlier too, can't test it, rounded corners 12+)</li>
 </ul>
