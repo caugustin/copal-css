@@ -1,4 +1,4 @@
-/* copal/cleanup.css -- copal-css.net, 2013-09-03 */
+/* copal/cleanup.css -- copal-css.net, 2014-02-12 */
 
 /*
     ~~~~~~~~~~~~
@@ -39,6 +39,7 @@
     
     == History ==
 
+	2014-02-12 caugustin.de:   Kerning properties added (via Typekit). Cleanup.
 	2013-09-03 caugustin.de:   Initial setup.
     
 
@@ -238,7 +239,7 @@ ul {
 /* Prevent background image flicker upon hover in IE6: */
 * html { /* IE6: */
 	filter: expression(
-		document.execCommand("BackgroundImageCache", false, true)
+		document.execCommand('BackgroundImageCache', false, true)
 	);
 }
                         )
@@ -292,7 +293,11 @@ p {
     
 */
 
-body { text-rendering: optimizeLegibility; }
+body {
+	text-rendering: optimizeLegibility;
+	font-feature-settings: 'kern' 1;
+	font-kerning: normal;
+}
 
 abbr {
 	white-space: nowrap;
@@ -403,6 +408,6 @@ svg:not(:root) {
     Forms
 */
 
-/* ToDo! */
+/* *ToDo!* */
 
 
